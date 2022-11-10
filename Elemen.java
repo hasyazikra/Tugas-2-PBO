@@ -17,7 +17,7 @@ class Dosen extends Elemen {
     private int jumlahHariKerja;
 
     public Dosen(String nama, int jumlahHariKerja) {
-        super(nama); // mengconstruct properti superclass
+        super(nama); // mengconstruct properti superclass, downcasting
         jamSibuk = jumlahHariKerja * 8; // rumus jumlah hari kerja x 8
     }
 
@@ -38,7 +38,7 @@ class Mahasiswa extends Elemen {
     public int jamSibuk;
 
     public Mahasiswa(String nama, int sks) {
-        super(nama); // mengconstuct properti superclass
+        super(nama); // mengconstuct properti superclass, downcasting
         jamSibuk = sks*3; //rumus sks x 3
     }
 
@@ -57,7 +57,7 @@ class Mahasiswa extends Elemen {
 class Asdos extends Mahasiswa {
     private int jamNgasdos;
     public Asdos(String nama, int sks, int jamNgasdos) {
-        super(nama, sks); //construct properti pada class Mahasiswa
+        super(nama, sks); //construct properti pada class Mahasiswa, downcasting
         jamSibuk = jamSibuk + jamNgasdos;  // rummus jam sibuk + jam ngasdos
     }
 
